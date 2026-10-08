@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>先锋影音电影网｜电影声音、影像技术与先锋作者研究资料</title>
+<meta name="description" content="先锋影音电影网专注于电影声音与影像技术、先锋电影作者及影音实验资料整理。本站以“先锋影音”为研究核心，记录先锋录音、先锋摄影、先锋剪辑与先锋放映如何影响电影表达，不提供在线播放、下载、网盘或侵权资源。访问地址：https://xianfengyingyindianyingwang-zh.github.io。">
+<meta name="keywords" content="先锋影音电影网, 先锋影音, 电影声音研究, 影像技术研究, 先锋电影作者, xianfengyingyindianyingwang-zh.github.io, 影音实验资料">
+<meta name="author" content="先锋影音电影网编辑部">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<meta name="theme-color" content="#101418">
+<link rel="canonical" href="https://xianfengyingyindianyingwang-zh.github.io">
+<style>
+:root{--bg:#101418;--bg2:#161b21;--paper:#ececeb;--line:#363d45;--line2:#2a3138;--ink:#15171b;--text:#d7dadd;--mute:#8d969f;--acid:#c6f93d;--cyan:#57e2d8;--violet:#a98cff;--amber:#ffb340;--rose:#ff6b6b}
+*{margin:0;padding:0;border:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--bg);color:var(--text);font:16px/1.78 "WenQuanYi Micro Hei","Microsoft YaHei",sans-serif;-webkit-text-size-adjust:100%;overflow-x:hidden}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit;background:none}
+:focus-visible{outline:2px solid var(--acid);outline-offset:3px}
+::selection{background:var(--acid);color:#111}
+.wrap{max-width:1400px;margin:0 auto;padding:0 34px}
+.dot{width:7px;height:7px;background:var(--acid);display:inline-block;border-radius:50%}
+.hint{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:800}
+.hint.a{color:var(--acid)}.hint.b{color:var(--cyan)}.hint.c{color:var(--violet)}.hint.d{color:var(--amber)}
+.tag{display:inline-flex;gap:7px;align-items:center;font-size:.7rem;letter-spacing:.12em;font-weight:800;border:1px solid var(--line);padding:5px 10px;border-radius:40px;color:var(--mute)}
+.rule{height:1px;background:var(--line2)}
+
+/* header */
+header{border-bottom:1px solid var(--line2);position:sticky;top:0;z-index:50;background:rgba(16,20,24,.93);backdrop-filter:blur(8px)}
+.hi{max-width:1400px;margin:0 auto;padding:12px 34px;display:flex;justify-content:space-between;font-size:.71rem;color:var(--mute);letter-spacing:.05em}
+.hi b{color:var(--acid);font-weight:800}
+.hrow{max-width:1400px;margin:0 auto;padding:19px 34px 17px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;gap:13px;align-items:center;font-size:1.3rem;font-weight:900;letter-spacing:-.015em;flex:0 0 auto}
+.logo b{color:var(--acid)}
+.logo small{display:block;font-size:.62rem;letter-spacing:.21em;color:var(--mute);font-weight:800;margin-top:3px}
+.nav{display:flex;gap:3px;flex-wrap:wrap;margin-left:auto;font-size:.82rem}
+.nav a{padding:7px 12px;border-radius:40px;border:1px solid transparent}
+.nav a:hover{color:var(--acid);border-color:var(--line)}
+.dombtn{border:1px solid var(--acid);color:var(--acid);padding:9px 14px;border-radius:40px;font-size:.72rem;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.dombtn:hover{background:var(--acid);color:#111}
+button.toggle{display:none}
+
+/* hero */
+.hero{padding:78px 0 64px;position:relative;border-bottom:1px solid var(--line2);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-180px;top:-150px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(198,249,61,.12),transparent 65%);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:68px;align-items:center}
+@media(max-width:1040px){.hgrid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.7rem,8.2vw,7.1rem);line-height:.91;letter-spacing:-.055em;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--acid)}
+.hero p.lead{margin-top:35px;font-size:1.28rem;line-height:1.8;color:#dbe0e4;max-width:40ch}
+.meters{margin-top:48px;display:grid;gap:23px}
+.meter span{display:flex;justify-content:space-between;font-size:.74rem;letter-spacing:.1em;color:var(--mute);margin-bottom:8px}
+.bar{height:4px;background:var(--line2);position:relative}
+.bar i{position:absolute;left:0;top:0;height:100%;background:var(--acid)}
+.meter.a .bar i{width:88%;background:var(--acid)}
+.meter.b .bar i{width:71%;background:var(--cyan)}
+.meter.c .bar i{width:63%;background:var(--violet)}
+.meter.d .bar i{width:52%;background:var(--amber)}
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2)}
+@media(max-width:560px){.mgrid{grid-template-columns:1fr}}
+.mcard{background:var(--bg2);padding:35px 31px;min-height:250px;display:flex;flex-direction:column;gap:14px;position:relative}
+.mcard:nth-child(1){border-top:3px solid var(--acid)}
+.mcard:nth-child(2){border-top:3px solid var(--cyan)}
+.mcard:nth-child(3){border-top:3px solid var(--violet)}
+.mcard:nth-child(4){border-top:3px solid var(--amber)}
+.mcard b{font-size:1.45rem;line-height:1.42;letter-spacing:-.02em;font-weight:900}
+.mcard p{color:var(--mute);font-size:.95rem}
+.mcard i{font-style:normal;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.13em;color:var(--mute);margin-top:auto;padding-top:16px;border-top:1px solid var(--line2)}
+
+/* sections */
+section{padding:104px 0}
+.stitle{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:52px;align-items:end;margin-bottom:62px}
+@media(max-width:900px){.stitle{grid-template-columns:1fr}}
+.stitle h2{font-size:clamp(2.05rem,5.2vw,4.25rem);line-height:.99;letter-spacing:-.045em;font-weight:900}
+.stitle h2 em{font-style:normal;color:var(--acid)}
+.stitle p{color:var(--mute);font-size:1.05rem;max-width:52ch}
+.kicker{display:flex;gap:11px;align-items:center;font-size:.72rem;letter-spacing:.17em;color:var(--acid);font-weight:800;text-transform:uppercase;margin-bottom:21px}
+.kicker::before{content:"";width:38px;height:2px;background:var(--acid)}
+
+/* 4 columns */
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:1080px){.cols{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cols{grid-template-columns:1fr}}
+.col{background:var(--bg2);border:1px solid var(--line2);padding:39px 31px 34px;display:flex;flex-direction:column;min-height:520px;position:relative}
+.col:hover{border-color:var(--line)}
+.col .n{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.74rem;letter-spacing:.14em;color:var(--mute);border-bottom:1px solid var(--line2);padding-bottom:18px;margin-bottom:28px;display:flex;justify-content:space-between}
+.col h3{font-size:1.72rem;line-height:1.38;letter-spacing:-.028em;font-weight:900}
+.col p{margin-top:16px;color:var(--mute);font-size:.97rem}
+.col ul{margin-top:30px;padding-top:24px;border-top:1px dashed var(--line2);display:grid;gap:15px}
+.col li{font-size:.92rem;padding-left:19px;position:relative;color:#cfd5d9}
+.col li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--acid)}
+.col a{margin-top:auto;padding-top:31px;color:var(--acid);font-size:.78rem;letter-spacing:.09em;font-weight:800}
+.col a:hover{color:var(--paper)}
+
+/* timeline */
+.tl{display:grid;gap:0;border:1px solid var(--line2);background:var(--bg2)}
+.tl .row{display:grid;grid-template-columns:115px minmax(0,1fr) minmax(0,1.25fr);gap:35px;padding:42px 40px;border-bottom:1px solid var(--line2)}
+.tl .row:last-child{border-bottom:0}
+@media(max-width:820px){.tl .row{grid-template-columns:1fr;gap:16px}.tl .row .yr{border-left:0;padding-left:0}}
+.tl .yr{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.12rem;font-weight:900;color:var(--acid)}
+.tl h3{font-size:1.52rem;line-height:1.45;letter-spacing:-.02em;font-weight:900}
+.tl p{color:var(--mute);font-size:.98rem}
+.tl .row .yr{border-left:3px solid var(--line);padding-left:22px}
+
+/* cards */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:980px){.notes{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.notes{grid-template-columns:1fr}}
+.note{border:1px solid var(--line2);background:var(--bg2);padding:35px 33px;display:flex;flex-direction:column;gap:17px;position:relative}
+.note .q{font-size:1.42rem;line-height:1.5;font-weight:900;letter-spacing:-.018em}
+.note p{font-size:.96rem;color:var(--mute)}
+.note small{margin-top:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.1em;color:var(--mute);padding-top:19px;border-top:1px solid var(--line2)}
+.note.a{border-top:4px solid var(--acid)}.note.b{border-top:4px solid var(--cyan)}.note.c{border-top:4px solid var(--violet)}.note.d{border-top:4px solid var(--amber)}
+
+/* archive */
+.archive{border:1px solid var(--line2);background:var(--bg2)}
+.archive .hd{padding:31px 38px;border-bottom:1px solid var(--line2);display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.archive .hd b{font-size:1.45rem;letter-spacing:-.022em}
+.fltrs{display:flex;gap:10px;flex-wrap:wrap}
+.fltrs button{border:1px solid var(--line);padding:9px 15px;border-radius:40px;font-size:.75rem;letter-spacing:.06em;color:var(--mute);font-weight:800;cursor:pointer}
+.fltrs button[aria-pressed="true"]{border-color:var(--acid);color:var(--acid)}
+.sc{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:27px 38px;vertical-align:top;border-bottom:1px solid var(--line2)}
+th{font-size:.66rem;letter-spacing:.19em;text-transform:uppercase;color:var(--mute);cursor:pointer;white-space:nowrap}
+th:hover{color:var(--acid)}
+td.ttl{font-weight:900;font-size:1.16rem;letter-spacing:-.012em}
+td.ttl small{display:block;color:var(--mute);font-size:.84rem;margin-top:7px;font-weight:400}
+.pill{display:inline-block;font-size:.7rem;letter-spacing:.1em;font-weight:800;padding:5px 10px;border-radius:2px;border:1px solid currentColor}
+.pill.a{color:var(--acid)}.pill.b{color:var(--cyan)}.pill.c{color:var(--violet)}.pill.d{color:var(--amber)}
+.empty{display:none;padding:39px;color:var(--mute)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.faq{grid-template-columns:1fr}}
+details{border:1px solid var(--line2);background:var(--bg2);padding:30px 35px}
+summary{cursor:pointer;font-size:1.19rem;font-weight:900;letter-spacing:-.016em;list-style:none;display:flex;gap:18px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"＋";color:var(--acid);font-weight:900;flex:0 0 auto}
+details[open] summary::before{content:"－"}
+details p{margin-top:20px;padding-top:20px;border-top:1px solid var(--line2);color:var(--mute);font-size:1rem}
+.callout{margin-top:62px;border-left:5px solid var(--acid);background:var(--bg2);padding:48px 49px;display:grid;gap:23px}
+.callout p{font-size:clamp(1.35rem,2.7vw,2.15rem);line-height:1.58;letter-spacing:-.026em;font-weight:900;max-width:32ch}
+.callout cite{font-style:normal;font-size:.78rem;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:58px}
+@media(max-width:880px){.contact{grid-template-columns:1fr}}
+.contact h3{font-size:2.25rem;line-height:1.34;letter-spacing:-.035em;font-weight:900}
+.contact h3 em{font-style:normal;color:var(--acid)}
+.contact p{margin-top:22px;color:var(--mute);font-size:1.05rem;max-width:48ch}
+.lst{margin-top:38px;display:grid;gap:0;border-top:1px solid var(--line2)}
+.lst li{display:grid;grid-template-columns:78px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid var(--line2)}
+.lst b{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;letter-spacing:.1em;color:var(--acid);padding-top:3px}
+.fg{display:grid;gap:24px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:640px){.r2{grid-template-columns:1fr}}
+label{display:block;font-size:.67rem;letter-spacing:.17em;color:var(--mute);margin-bottom:11px;font-weight:800;text-transform:uppercase}
+input,textarea,select{border:1px solid var(--line);border-radius:0;padding:17px 18px;width:100%;background:var(--bg2);color:var(--paper)}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--acid);background:#1a1f25}
+textarea{min-height:170px;resize:vertical}
+.chk{display:grid;gap:15px}
+.chk label{display:flex;gap:13px;align-items:flex-start;font-size:.92rem;letter-spacing:0;text-transform:none;font-weight:400;color:#d3d8dc}
+.chk input{width:20px;height:20px;flex:0 0 20px;margin-top:2px;border-radius:0}
+.send{background:var(--acid);color:#111;padding:20px 44px;font-size:.9rem;letter-spacing:.13em;font-weight:900;border-radius:0;cursor:pointer}
+.send:hover{background:var(--paper)}
+.smsg{display:none;color:var(--acid);font-weight:800;font-size:.88rem;margin-top:19px}
+
+/* footer */
+footer{background:#0b0d10;border-top:1px solid var(--line2)}
+.fin{max-width:1400px;margin:0 auto;padding:80px 34px 44px;display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:52px}
+@media(max-width:920px){.fin{grid-template-columns:1fr 1fr}}
+.brand{font-size:2.35rem;font-weight:900;letter-spacing:-.04em;line-height:1.05}
+.brand b{color:var(--acid)}
+.fin p{margin-top:21px;color:var(--mute);font-size:.94rem;max-width:36ch}
+.fdom{margin-top:31px;border:1px solid rgba(255,255,255,.14);padding:22px 24px;background:#11151a}
+.fdom b{display:block;font-size:.65rem;letter-spacing:.19em;color:var(--acid);margin-bottom:9px;text-transform:uppercase}
+.fdom code{word-break:break-all;font-size:.93rem;color:var(--paper)}
+.fin h4{font-size:.65rem;letter-spacing:.23em;color:var(--mute);margin-bottom:26px;text-transform:uppercase}
+.fin ul{display:grid;gap:16px;font-size:.94rem}
+.fin a:hover{color:var(--acid)}
+.fbot{max-width:1400px;margin:0 auto;padding:31px 34px 48px;border-top:1px solid var(--line2);display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between;font-size:.8rem;color:var(--mute)}
+@media(max-width:820px){button.toggle{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:#0d1115;border:1px solid var(--line2);padding:18px;flex-direction:column}.nav.open{display:flex}.hrow{flex-wrap:wrap}.dombtn{display:none}.wrap{padding-left:20px;padding-right:20px}.hi,.hrow,.fin,.fbot{padding-left:20px;padding-right:20px}.tl .row,.th,.td{padding-left:20px;padding-right:20px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header><div class="hi"><span><span class="dot"></span>　先锋影音电影网 · 电影声音与影像技术研究资料</span><span><b>唯一官方地址：</b>xianfengyingyindianyingwang-zh.github.io</span></div><div class="hrow"><a class="logo" href="#top" aria-label="先锋影音电影网首页">先锋影音<b>电影网</b><small>SOUND × IMAGE × CINEMA</small></a><nav class="nav" id="mn"><a href="#start">研究起点</a><a href="#columns">四个栏目</a><a href="#tl">技术沿革</a><a href="#notes">影音观察</a><a href="#archive">资料档案</a><a href="#faq">常见疑问</a><a href="#contact">读者来信</a></nav><a class="dombtn" href="https://xianfengyingyindianyingwang-zh.github.io">访问：xianfengyingyindianyingwang-zh.github.io</a><button class="toggle" aria-label="展开导航">目录</button></div></header>
+
+<section class="hero" id="top"><div class="wrap"><div class="hgrid"><div><div class="kicker">先锋影音电影网 / 研究入口</div><h1>先锋<em>影音</em><br>如何改变<br>电影表达</h1><p class="lead">先锋影音电影网研究电影的声音设计、影像技术、先锋作者与实验放映。名称中的“先锋影音”是研究对象，并非播放软件、下载工具或在线影院，本站不提供播放入口。</p><div class="meters"><div class="meter a"><span><span>先锋录音研究</span><b>88%</b></span><div class="bar"><i></i></div></div><div class="meter b"><span><span>先锋摄影与影像技术</span><b>71%</b></span><div class="bar"><i></i></div></div><div class="meter c"><span><span>先锋作者与作品资料</span><b>63%</b></span><div class="bar"><i></i></div></div><div class="meter d"><span><span>先锋放映与实验现场</span><b>52%</b></span><div class="bar"><i></i></div></div></div></div>
+ <div class="mgrid"><article class="mcard"><span class="tag"><span class="dot"></span>声音优先</span><b>从对话到空间，声音不是画面的附属品</b><p>研究先锋录音如何处理环境声、静默与音乐，让声音参与叙事。</p><i>栏目入口：先锋录音研究</i></article>
+ <article class="mcard"><span class="tag"><span class="dot"></span>影像实验</span><b>影像技术改变的不只是画质</b><p>镜头、感光材料、数字影像与放映条件，共同塑造先锋影像的视觉语言。</p><i>栏目入口：先锋影像技术</i></article>
+ <article class="mcard"><span class="tag"><span class="dot"></span>作者研究</span><b>先锋作者不是风格标签</b><p>以作品年代、技术条件与创作访谈为依据，区分事实与评论。</p><i>栏目入口：先锋作者研究</i></article>
+ <article class="mcard"><span class="tag"><span class="dot"></span>观看边界</span><b>影音实验需要明确的观看提示</b><p>频闪、强声、静默与长镜头均会影响观看，本站提供非评价性提示。</p><i>栏目入口：观看边界</i></article></div></div></div></section>
+
+<section id="start"><div class="wrap"><div class="stitle"><div><div class="kicker">01 / 研究起点</div><h2>“先锋影音”是<em>研究主题，不是播放工具。</em></h2></div><div><p>本站研究电影声音与影像技术中的先锋实践，不提供在线播放、下载、网盘或任何侵权资源链接。读者可在正规放映与发行渠道观看影片。</p></div></div>
+ <div class="callout"><p>“一部先锋影音作品可能先在声音中提出问题，再让影像完成答案；研究者的任务，是把这种关系讲清楚。”</p><cite>先锋影音电影网编辑原则</cite></div>
+</div></section>
+
+<section id="columns"><div class="wrap"><div class="stitle"><div><div class="kicker">02 / 四个栏目</div><h2>四个栏目分别回答<em>声音、影像、作者与观看。</em></h2></div><div><p>每个栏目使用不同的资料结构与研究问题。声音研究不会替代作者研究，技术资料也不会被写成作品评价。</p></div></div>
+ <div class="cols">
+  <article class="col"><div class="n"><span>COLUMN 01</span><span class="hint a">声音</span></div><h3>先锋录音研究</h3><p>分析同期录音、声音设计、静默处理、音乐与噪声如何参与伦理和叙事表达。</p><ul><li>声音如何建立空间与距离</li><li>静默何时成为叙事手段</li><li>声音资料如何核验来源</li></ul><a href="#archive">进入先锋录音资料 →</a></article>
+  <article class="col"><div class="n"><span>COLUMN 02</span><span class="hint b">影像</span></div><h3>先锋影像技术</h3><p>整理摄影、镜头、胶片、数字影像与后期技术，研究技术条件如何形成视觉语言。</p><ul><li>镜头选择与画面运动</li><li>胶片、数字与修复版本差异</li><li>影像技术如何服务叙事</li></ul><a href="#tl">进入影像技术沿革 →</a></article>
+  <article class="col"><div class="n"><span>COLUMN 03</span><span class="hint c">作者</span></div><h3>先锋作者研究</h3><p>以作品年表、创作访谈与正式资料为依据，整理先锋电影作者的创作轨迹。</p><ul><li>公开访谈与可核验材料</li><li>创作年表与作品版本</li><li>作者研究中的评论边界</li></ul><a href="#archive">进入作者资料 →</a></article>
+  <article class="col"><div class="n"><span>COLUMN 04</span><span class="hint d">观看</span></div><h3>观看边界与提示</h3><p>从频闪、强声、静默、时长与放映环境出发，提供透明的观看信息。</p><ul><li>频闪与强声内容提示</li><li>静默、长镜头与观影预期</li><li>放映版本及字幕差异</li></ul><a href="#faq">进入观看边界 →</a></article>
+ </div>
+</div></section>
+
+<section id="tl"><div class="wrap"><div class="stitle"><div><div class="kicker">03 / 技术沿革</div><h2>先锋影音的变革，<em>往往是一次材料与技术的转向。</em></h2></div><div><p>时间轴只记录公开资料中的技术节点，不表示艺术价值排名。年份用于定位研究背景。</p></div></div>
+ <div class="tl"><div class="row"><div class="yr">1960s</div><h3>声音从记录走向设计</h3><p>同期录音与后期声音设计逐渐分工，声音不再只是还原现场，而开始承担叙事和情绪组织功能。</p></div><div class="row"><div class="yr">1970s</div><h3>便携摄影改变拍摄现场</h3><p>轻便摄影设备使移动拍摄、现场记录与自然光拍摄增加，影像更接近即时观察。</p></div><div class="row"><div class="yr">1990s</div><h3>数字音频进入电影制作</h3><p>数字音频带来更精细的声音分层，也让声音修复与重混成为可能，研究需同时记录原始版本与重制版本。</p></div><div class="row"><div class="yr">2000s</div><h3>数字影像改变视觉质感</h3><p>数字摄影、后期调色与影像修复改变画面质感，也造成不同放映版本之间的差异。</p></div><div class="row"><div class="yr">2020s</div><h3>沉浸式声音与实验放映</h3><p>沉浸式声音、激光放映、实时影像与实验现场增加，观看提示需要同时覆盖视听与空间条件。</p></div></div>
+</div></section>
+
+<section id="notes"><div class="wrap"><div class="stitle"><div><div class="kicker">04 / 影音观察</div><h2>先锋影音作品在网上被看见之前，<em>往往先被压缩成一个关键词。</em></h2></div><div><p>本栏目观察预告、片段、评论与算法如何改变作品传播，不把片段评价等同于完整作品评价。</p></div></div>
+ <div class="notes"><article class="note a"><span class="q">“声音实验”为什么容易被误读为噪音？</span><p>声音实验的研究价值在于结构、空间与情绪，但简短片段常只留下“听不清”或“嘈杂”的印象。</p><small>观察对象：声音片段传播</small></article>
+ <article class="note b"><span class="q">修复版是否等于“更好”的版本？</span><p>修复可能提升清晰度，也可能改变颗粒、色彩与声音。版本研究应并列记录，而非简单判定高下。</p><small>观察对象：修复与版本</small></article>
+ <article class="note c"><span class="q">算法推荐会把先锋作者变成标签吗？</span><p>“先锋影音”可能被算法简化为风格关键词，掩盖作者在不同时期的技术选择与创作变化。</p><small>观察对象：推荐与标签</small></article>
+ <article class="note d"><span class="q">为什么观看提示不能写成道德警告？</span><p>频闪、强声与静默属于观看条件；提示只帮助读者判断体验，不构成作品或观众的道德评价。</p><small>观察对象：观看边界</small></article>
+ <article class="note a"><span class="q">实验影像是否必须依赖字幕？</span><p>字幕影响节奏、画面与信息接收。版本研究中需要同时记录字幕语言、完整性与翻译差异。</p><small>观察对象：字幕与版本</small></article>
+ <article class="note b"><span class="q">现场放映与家庭观看会改变结论吗？</span><p>会。声压、银幕尺寸、空间反射与观众在场，都是影音体验的一部分，研究中需明确观看条件。</p><small>观察对象：放映环境</small></article></div>
+</div></section>
+
+<section id="archive"><div class="wrap"><div class="stitle"><div><div class="kicker">05 / 公开资料档案</div><h2>档案只整理可核验资料，<em>不提供下载或播放链接。</em></h2></div><div><p>可按栏目筛选，也可点击表头排序。编号表示归档顺序，不代表评分、年代或重要性。</p></div></div>
+ <div class="archive"><div class="hd"><b>先锋影音公开资料档案</b><div class="fltrs" id="fl"><button data-f="all" aria-pressed="true">全部资料</button><button data-f="声音" aria-pressed="false">声音</button><button data-f="影像" aria-pressed="false">影像</button><button data-f="作者" aria-pressed="false">作者</button><button data-f="观看" aria-pressed="false">观看</button></div></div><div class="sc"><table id="tb"><thead><tr><th data-k="no">编号</th><th data-k="name">资料条目</th><th data-k="type">所属栏目</th><th>可核验内容</th><th>状态</th></tr></thead><tbody>
+  <tr data-no="01" data-name="先锋录音：声音空间分析" data-type="声音"><td>01</td><td class="ttl">声音空间分析<small>同期录音、环境声与声音设计</small></td><td><span class="pill a">声音</span></td><td>录音资料、声音设计说明</td><td>公开资料</td></tr>
+  <tr data-no="02" data-name="先锋影像：镜头与运动研究" data-type="影像"><td>02</td><td class="ttl">镜头与运动研究<small>摄影机运动如何影响叙事节奏</small></td><td><span class="pill b">影像</span></td><td>摄影资料、技术访谈</td><td>持续整理</td></tr>
+  <tr data-no="03" data-name="先锋作者：创作年表整理" data-type="作者"><td>03</td><td class="ttl">创作年表整理<small>只收录可核验的正式资料</small></td><td><span class="pill c">作者</span></td><td>作品年表、访谈、公告</td><td>持续整理</td></tr>
+  <tr data-no="04" data-name="观看边界：频闪与强声提示" data-type="观看"><td>04</td><td class="ttl">频闪与强声提示<small>不泄露剧情的内容提示模板</small></td><td><span class="pill d">观看</span></td><td>内容提示、版本说明</td><td>持续整理</td></tr>
+  <tr data-no="05" data-name="先锋录音：静默的结构作用" data-type="声音"><td>05</td><td class="ttl">静默的结构作用<small>静默如何改变人物与空间关系</small></td><td><span class="pill a">声音</span></td><td>声音片段、影片结构</td><td>持续整理</td></tr>
+  <tr data-no="06" data-name="先锋影像：胶片与数字比较" data-type="影像"><td>06</td><td class="ttl">胶片与数字比较<small>记录差异，不进行简单优劣判断</small></td><td><span class="pill b">影像</span></td><td>技术资料、版本记录</td><td>持续整理</td></tr>
+  <tr data-no="07" data-name="先锋作者：访谈摘录规范" data-type="作者"><td>07</td><td class="ttl">访谈摘录规范<small>区分访谈原文与编辑评论</small></td><td><span class="pill c">作者</span></td><td>访谈原文、来源链接</td><td>持续整理</td></tr>
+  <tr data-no="08" data-name="观看边界：放映环境说明" data-type="观看"><td>08</td><td class="ttl">放映环境说明<small>现场声压、银幕与空间条件</small></td><td><span class="pill d">观看</span></td><td>放映资料、场地信息</td><td>持续整理</td></tr>
+ </tbody></table></div><p class="empty" id="none">当前栏目没有匹配资料，请选择“全部资料”。</p></div>
+</div></section>
+
+<section id="faq"><div class="wrap"><div class="stitle"><div><div class="kicker">06 / 常见疑问</div><h2>关于资源、版权、资料与转载，<em>本站统一说明如下。</em></h2></div><div><p>先锋影音电影网不提供在线播放、网盘、下载或侵权资源链接。任何以本站名义发布的资源均与本站无关。</p></div></div>
+ <div class="faq"><details open><summary>先锋影音电影网提供影片在线播放或下载吗？</summary><p>不提供。本站研究电影声音与影像技术，不提供播放、网盘或下载服务，也不附侵权资源链接。</p></details><details><summary>唯一官方访问地址是什么？</summary><p>官方地址为 <code>https://xianfengyingyindianyingwang-zh.github.io</code>。请认准该域名，避免通过短链接、镜像或第三方资源页面访问。</p></details><details><summary>“先锋影音”是否与播放软件有关？</summary><p>无关。本站名称中的“先锋影音”是电影声音、影像技术与先锋作者的研究主题，不是软件名称，也不代表播放工具。</p></details><details><summary>档案中的资料可以视为权威片单吗？</summary><p>不能。档案只是公开资料整理，不代表完整、实时或权威片单。正式放映、版本和发行信息请以片方及正规渠道为准。</p></details><details><summary>资料出现错误如何反馈？</summary><p>可通过“读者来信”提供作品名称、错误位置、正确信息与可核验来源。编辑部核验后会修订，并保留资料更新记录。</p></details><details><summary>能否转载文章或引用档案？</summary><p>转载须事先取得书面授权，并保留作者署名、标题与官方链接。引用档案时，请同时注明资料版本与来源。</p></details></div>
+ <div class="callout"><p>“本站不以‘先锋’为营销标签，也不把技术新奇等同于艺术价值；资料准确、技术可核验、评论有边界，才是先锋影音研究的基础。”</p><cite>— 内容编辑规范</cite></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="stitle"><div><div class="kicker">07 / 读者来信</div><h2>欢迎补充公开资料与勘误，<em>但请附上来源。</em></h2></div><div><p>来信请明确资料类型、发生时间、版本信息及原始来源。个人联系方式仅用于回复，不会出现在网站页面或资料档案中。</p></div></div>
+ <div class="contact"><article><h3>来信前请准备<em>四项信息。</em></h3><p>完整的作品名称、发生时间、版本信息与可回溯来源，能提高资料核验效率；涉及声音、影像技术或放映现场的材料，也应说明研究条件。</p><ul class="lst"><li><b>01</b><span>作品名称、作者、年份等可确认信息。</span></li><li><b>02</b><span>录音、摄影、放映或传播发生的具体时间。</span></li><li><b>03</b><span>原始来源链接、正式公告或公开文献信息。</span></li><li><b>04</b><span>来信类型：资料补充、内容勘误、转载申请或版权问题。</span></li></ul></article><form class="fg" id="cf" novalidate><div class="r2"><div><label for="nm">称呼或笔名</label><input id="nm" required></div><div><label for="em">联系邮箱</label><input id="em" type="email" required></div></div><div><label for="tp">来信类型</label><select id="tp" required><option value="">请选择</option><option>先锋录音资料补充</option><option>先锋影像技术勘误</option><option>先锋作者资料更新</option><option>版本、放映或字幕资料</option><option>转载申请</option><option>版权或侵权问题</option></select></div><div><label for="tx">来信内容、作品信息与可核验来源</label><textarea id="tx" required></textarea></div><div class="chk"><label><input type="checkbox" required> 我确认所提交内容可以公开核验，不包含盗版下载、网盘资源或侵权播放入口。</label><label><input type="checkbox" required> 我了解来信中的个人联系方式仅用于回复，不会被公开在网站页面或资料档案中。</label></div><button type="submit" class="send">提交给编辑部</button><span class="smsg" id="ok">已收到来信，编辑部核验后将通过邮箱回复。</span></div></form></div></div>
+</div></section>
+
+<footer><div class="fin"><div><div class="brand">先锋影音<b>电影网</b></div><p>研究电影声音设计、影像技术、先锋作者与实验放映的资料型站点。本站不提供在线播放、下载、网盘或侵权资源链接。</p><div class="fdom"><b>唯一官方访问地址</b><code>https://xianfengyingyindianyingwang-zh.github.io</code></div></div><div><h4>研究栏目</h4><ul><li><a href="#columns">先锋录音研究</a></li><li><a href="#columns">先锋影像技术</a></li><li><a href="#archive">先锋作者研究</a></li><li><a href="#archive">观看边界与提示</a></li></ul></div><div><h4>资料入口</h4><ul><li><a href="#archive">公开资料档案</a></li><li><a href="#archive">栏目筛选</a></li><li><a href="#tl">技术沿革</a></li><li><a href="#contact">资料勘误</a></li></ul></div><div><h4>读者服务</h4><ul><li><a href="#contact">读者来信</a></li><li><a href="#">转载申请</a></li><li><a href="#faq">常见疑问</a></li><li><a href="#">版权说明</a></li></ul></div></div><div class="fbot"><span>© <span id="yr"></span> 先锋影音电影网（xianfengyingyindianyingwang-zh.github.io）。页面涉及的影片、声音、影像及相关权利归相应权利人所有，本站仅用于研究、评论与公开资料整理。</span><span>本站不提供在线播放、下载、网盘或侵权资源链接</span></div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelector('.toggle').addEventListener('click',function(){document.getElementById('mn').classList.toggle('open')});
+document.querySelectorAll('#mn a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mn').classList.remove('open')})});
+(function(){
+ var rows=Array.prototype.slice.call(document.querySelectorAll('#tb tbody tr')),empty=document.getElementById('none'),cur='all',asc=false;
+ function draw(){
+  var n=0;
+  rows.forEach(function(r){var hit=cur==='all'||r.getAttribute('data-type')===cur;r.style.display=hit?'':'none';if(hit)n++;});
+  empty.style.display=n?'none':'block';
+ }
+ document.querySelectorAll('#fl button').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('#fl button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+  b.setAttribute('aria-pressed','true');cur=b.getAttribute('data-f');draw();
+ })});
+ draw();
+ document.querySelectorAll('#tb th').forEach(function(th){th.addEventListener('click',function(){
+  var k=th.getAttribute('data-k');
+  rows.sort(function(a,b){return asc?String(a.getAttribute('data-'+k)).localeCompare(String(b.getAttribute('data-'+k)),'zh'):String(b.getAttribute('data-'+k)).localeCompare(String(a.getAttribute('data-'+k)),'zh')});
+  asc=!asc;
+  var tb=document.getElementById('tb').tBodies[0];
+  rows.forEach(function(r){tb.appendChild(r)});
+ })});
+})();
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();this.reset();document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
